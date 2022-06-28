@@ -58,7 +58,7 @@ module Devise
         def devise_writer_wrapper
           role = Rails.application.config.active_record.writing_role || :writing
           ActiveRecord::Base.connected_to(role: role) do
-            ActiveRecord::Base.connection_handler.while_preventing_writes(false) do
+            ActiveRecord::Base.legacy_connection_handling.while_preventing_writes(false) do
               yield
             end
           end
