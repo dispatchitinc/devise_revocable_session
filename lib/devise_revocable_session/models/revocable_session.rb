@@ -57,9 +57,7 @@ module Devise
 
         def devise_writer_wrapper
           role = Rails.application.config.active_record.writing_role || :writing
-          ActiveRecord::Base.connected_to(role: role, prevent_writes: true) do
-            # Rails will check each query to ensure it's a read querys
-          end
+          ActiveRecord::Base.connected_to(role: :writing, prevent_writes: false, &block)
         end
 
         protected
