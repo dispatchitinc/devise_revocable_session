@@ -42,8 +42,6 @@ Add `:revocable_session` to your model's devise declaration.
 2. Create a feature branch for your changes
 3. Run `bundle install`
 4. Make your changes
-5. Run `bundle exec rake` to run the tests
-    * Run `bundle exec guard` to run tests continuously as you develop
 6. Test the gem locally
     * Run `gem build *.gemspec` to build the gem locally
     * Run `gem install --local devise_revocable_session-X.X.X.gem` to install the gem locally
