@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'devise_revocable_session/version'
+$:.push File.expand_path("../lib", __FILE__)
+require "devise_revocable_session/version"
 
 Gem::Specification.new do |spec|
   spec.name          = 'devise_revocable_session'
@@ -16,8 +15,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'http://github.com/dispatchitinc/devise_revocable_session'
   spec.metadata      = { 'rubygems_mfa_required' => 'false' }
 
-  spec.files         = Dir.chdir(File.expand_path(__dir__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(test|spec|features)/})
   end
 
   spec.bindir        = 'exe'
