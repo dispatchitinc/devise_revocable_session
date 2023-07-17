@@ -3,5 +3,12 @@
   "extends": [
     "config:base"
   ],
-  "includeForks": true
+  "includeForks": true,
+  "rebaseWhen": "conflicted",
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
+  ],
+  "updateNotScheduled": false
 }
