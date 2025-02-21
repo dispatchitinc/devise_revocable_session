@@ -1,5 +1,7 @@
 # DeviseRevocableSession
 
+> This project is archived as it won't receive any more bug fixes, feature development, or security updates.
+
 A module for devise to revoke sessions.
 
 This is borrowed heavily from: https://github.com/mkhairi/devise_revocable and https://www.jonathanleighton.com/articles/2013/revocable-sessions-with-devise/.
